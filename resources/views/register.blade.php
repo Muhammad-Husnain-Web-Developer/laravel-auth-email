@@ -103,8 +103,8 @@
             {{-- Name --}}
             <div class="mb-3">
                 <label class="form-label">Full Name</label>
-                <input type="text" name="name" 
-                       class="form-control @error('name') is-invalid @enderror" 
+                <input type="text" name="name"
+                       class="form-control @error('name') is-invalid @enderror"
                        value="{{ old('name') }}" required autofocus>
                 @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -114,8 +114,8 @@
             {{-- Email --}}
             <div class="mb-3">
                 <label class="form-label">Email Address</label>
-                <input type="email" name="email" 
-                       class="form-control @error('email') is-invalid @enderror" 
+                <input type="email" name="email"
+                       class="form-control @error('email') is-invalid @enderror"
                        value="{{ old('email') }}" required>
                 @error('email')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -125,8 +125,8 @@
             {{-- Password --}}
             <div class="mb-4">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" 
-                       class="form-control @error('password') is-invalid @enderror" 
+                <input type="password" name="password"
+                       class="form-control @error('password') is-invalid @enderror"
                        required>
                 @error('password')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -140,7 +140,7 @@
         </form>
 
         <div class="auth-footer text-center">
-            Already have an account? <a >Login</a>
+            Already have an account? <a href="{{ route('login') }}">Login</a>
         </div>
     </div>
 </div>
